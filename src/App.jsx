@@ -14,7 +14,8 @@ import Notifications from "./pages/Profile/Notifications";
 import Resume from "./pages/Profile/Resume";
 import MyJobs from "./pages/Profile/MyJobs";
 
-import EmployerDashboard from "./employer/EmployerDashBoard";
+
+import EmployerDashboard from "./employer/EmployerDashboard";
 import PostJob from "./employer/PostJob";
 import EmployerJobs from "./employer/EmployerJobs";
 import EmployerApplications from "./employer/EmployerApplications";
