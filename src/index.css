@@ -1,0 +1,600 @@
+@import "tailwindcss";
+
+
+/* =========================
+   HERO BACKGROUND
+========================= */
+
+@keyframes heroZoom {
+
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+
+}
+
+
+/* =========================
+   FLOATING BADGES
+========================= */
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-18px);
+  }
+
+}
+
+
+@keyframes floatReverse {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(18px);
+  }
+
+}
+
+
+/* =========================
+   TEXT ANIMATIONS
+========================= */
+
+@keyframes fadeUp {
+
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+@keyframes titleReveal {
+
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+@keyframes gradientMove {
+
+  0% {
+    background-position: 0% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
+
+}
+
+
+/* =========================
+   SCROLL ANIMATION
+========================= */
+
+@keyframes scrollLine {
+
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+
+  50% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+
+  51% {
+    transform-origin: bottom;
+  }
+
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+
+}
+
+
+/* =========================
+   OLD JOB CARD CLASSES
+   Temporary - Job 2 & 3
+========================= */
+
+.job-card {
+
+  position: relative;
+
+  min-height: 310px;
+
+  padding: 25px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 22px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.025)
+  );
+
+  backdrop-filter: blur(12px);
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease;
+
+}
+
+
+.job-card:hover {
+
+  transform: translateY(-8px);
+
+  border-color: rgba(255, 255, 255, 0.25);
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.13),
+    rgba(255, 255, 255, 0.04)
+  );
+
+}
+
+
+/* Company Logo */
+
+.company-logo {
+
+  width: 48px;
+
+  height: 48px;
+
+  border-radius: 14px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: white;
+
+  color: #0b0d0f;
+
+  font-size: 20px;
+
+  font-weight: 700;
+
+}
+
+
+/* Job Type */
+
+.job-type {
+
+  padding: 6px 10px;
+
+  border-radius: 999px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  font-size: 9px;
+
+  letter-spacing: 0.12em;
+
+  color: rgba(255, 255, 255, 0.55);
+
+}
+
+
+/* Job Meta */
+
+.job-meta {
+
+  margin-top: 28px;
+
+  padding-top: 18px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 10px;
+
+  font-size: 12px;
+
+  color: rgba(255, 255, 255, 0.5);
+
+}
+
+
+/* Job Footer */
+
+.job-footer {
+
+  margin-top: 17px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  color: rgba(255, 255, 255, 0.4);
+
+  font-size: 12px;
+
+}
+
+
+/* Arrow */
+
+.job-arrow {
+
+  width: 38px;
+
+  height: 38px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: white;
+
+  transition: all 0.3s ease;
+
+}
+
+
+.job-card:hover .job-arrow {
+
+  background: white;
+
+  color: #0b0d0f;
+
+  transform: rotate(45deg);
+
+}
+
+/* =========================
+   COMPANY MARQUEE
+========================= */
+
+@keyframes companyMarquee {
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+
+}
+
+
+/* =========================
+   COMPANY HOVER
+========================= */
+
+.company-pill {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  min-width: 190px;
+
+  padding: 16px 22px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  color: rgba(255, 255, 255, 0.7);
+
+  backdrop-filter: blur(10px);
+
+  transition: all 0.3s ease;
+
+}
+
+
+.company-pill:hover {
+
+  transform: translateY(-5px);
+
+  border-color: rgba(255, 255, 255, 0.2);
+
+  background: rgba(255, 255, 255, 0.08);
+
+  color: white;
+
+}
+
+
+.company-pill-logo {
+
+  width: 38px;
+
+  height: 38px;
+
+  border-radius: 11px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: white;
+
+  color: #0d201e;
+
+  font-weight: 700;
+
+}
+
+
+/* =========================================
+   JOBHUB ANIMATIONS
+========================================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes titleReveal {
+  from {
+    opacity: 0;
+    transform: translateY(45px);
+    filter: blur(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: translateX(-50%) scale(1);
+  }
+
+  50% {
+    opacity: 0.8;
+    transform: translateX(-50%) scale(1.12);
+  }
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  margin: 0;
+  background: #080B0B;
+}
+
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: #fff;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+
+/* =====================================================
+   INDUSTRY INSIGHTS SCROLL ANIMATION
+===================================================== */
+
+.industry-insights-hidden {
+  opacity: 0;
+  transform: translateY(80px) scale(0.96);
+}
+
+.industry-insights-show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  animation: industryReveal 1.2s cubic-bezier(.22, 1, .36, 1) forwards;
+}
+
+@keyframes industryReveal {
+
+  0% {
+    opacity: 0;
+    transform: translateY(80px) scale(0.96);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(-8px) scale(1.01);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+}
+
+
+/* Chart bars */
+
+.industry-insights-show .h-\[18px\] {
+  animation: chartBar .8s ease-out .3s both;
+}
+
+.industry-insights-show .h-\[27px\] {
+  animation: chartBar .8s ease-out .4s both;
+}
+
+.industry-insights-show .h-\[35px\] {
+  animation: chartBar .8s ease-out .5s both;
+}
+
+.industry-insights-show .h-\[44px\] {
+  animation: chartBar .8s ease-out .6s both;
+}
+
+.industry-insights-show .h-\[54px\] {
+  animation: chartBar .8s ease-out .7s both;
+}
+
+.industry-insights-show .h-\[63px\] {
+  animation: chartBar .8s ease-out .8s both;
+}
+
+.industry-insights-show .h-\[73px\] {
+  animation: chartBar .8s ease-out .9s both;
+}
+
+@keyframes chartBar {
+
+  from {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+
+  to {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+
+}
+
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .industry-insights-hidden,
+  .industry-insights-show {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
+}
+
+@keyframes textShine {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes floatText {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+.jobhub-text-shine {
+  background: linear-gradient(
+    90deg,
+    #2563eb,
+    #7c3aed,
+    #2563eb,
+    #06b6d4
+  );
+
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  animation: textShine 5s ease-in-out infinite;
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+.animate-slide-left {
+    animation: slideLeft 0.8s ease-out;
+}
+
+.animate-fade-up {
+    animation: fadeUp 0.8s ease-out;
+}
